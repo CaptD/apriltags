@@ -50,7 +50,6 @@ set(LIBRARY_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib")
 set(BINARY_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/bin")
 
 add_subdirectory(src)
-add_subdirectory(example)
 
 export(TARGETS apriltags
     FILE "${PROJECT_BINARY_DIR}/apriltagsTargets.cmake")
