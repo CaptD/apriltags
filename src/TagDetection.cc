@@ -74,6 +74,7 @@ bool TagDetection::overlapsTooMuch(const TagDetection &other) const {
 }
 
 Eigen::Matrix4d TagDetection::getRelativeTransform(double tag_size, double fx, double fy, double px, double py) const {
+  std::cout << "enter relative transform" << std::endl;
   std::vector<cv::Point3f> objPts;
   std::vector<cv::Point2f> imgPts;
   double s = tag_size/2.;
@@ -113,6 +114,7 @@ Eigen::Matrix4d TagDetection::getRelativeTransform(double tag_size, double fx, d
 
 void TagDetection::getRelativeTranslationRotation(double tag_size, double fx, double fy, double px, double py,
                                                   Eigen::Vector3d& trans, Eigen::Matrix3d& rot) const {
+  std::cout << "enter relative translation rotation" << std::endl;
   Eigen::Matrix4d T =
     getRelativeTransform(tag_size, fx, fy, px, py);
 
