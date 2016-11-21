@@ -22,6 +22,7 @@ TagDetection::TagDetection()
   : good(false), obsCode(), code(), id(), hammingDistance(), rotation(), p(),
     cxy(), observedPerimeter(), homography(), hxy() {
   homography.setZero();
+  std::cout << "enter tag detection constructor" << std::endl;
 }
 
 TagDetection::TagDetection(int _id)
